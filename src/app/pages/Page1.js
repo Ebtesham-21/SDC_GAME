@@ -11,8 +11,8 @@ export default function Page1(){
         <>
       
         <div className="bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col items-center justify-center" >
-        <div class="grid grid-cols-3 pt-2 gap-6 p-6">
-            <div> 
+        <div class="grid grid-cols-3 pt-2 gap-x-32 ">
+            <div className="content-start"> 
                 <div className="relative w-[300px] h-[500px]">
                     <Image
                     src="/Assets/Images/Landing-Page_Diary.png"
@@ -26,7 +26,7 @@ export default function Page1(){
                 </div>
                 <div>
                 <Link href="Page2" passHref>
-                    <button  className="py-2 px-4 rounded-full shadow-lg transition-all">
+                    <button  className=" rounded-full ">
                     <Image
                     src="/Assets/Images/Landing-Page_Explore_Button.png"
                     alt="Explore Button"
@@ -42,7 +42,7 @@ export default function Page1(){
                 
                 </div>
             <div> 
-                 <Image
+                 <Image 
                 src="/Assets/Images/Landing-Page_Character.png"
                 alt="Landing Page Character"
                 width={300}
@@ -50,9 +50,11 @@ export default function Page1(){
                 />
                 </div>
 
-            <div>  <a href="https://www.unicef.org" target="_blank" rel="noopener noreferrer">
+            <div> 
+                 <a href="https://www.unicef.org" target="_blank" rel="noopener noreferrer">
                     <Image src="/Assets/Images/Landing-Page_Unicef_Button.png"  alt="UNICEF Logo" width={96} height={96}/>
-                </a></div>
+                 </a>
+            </div>
         </div>
         </div>
             {/* <div className="flex justify-center items-center gap-8">
