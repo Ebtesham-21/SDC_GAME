@@ -1,10 +1,17 @@
 import Image from "next/image";
-import Page_1 from "./pages/Page-1";
+import Page1 from "./pages/Page1";
+import Page2 from "./pages/Page2";
+
+
+
 
 export default function Home() {
   return (
    <>
-  <Page_1/>
+  <Page1/>
+  <Page2/>
+
+
    </>
   );
 }
