@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import Image from "next/image";
 
-export default function Page2(){
+export default function secondPage(){
     const [language, setLanguage] = useState('ENG');
     const [musicOn, setMusicOn] = useState(true);
 

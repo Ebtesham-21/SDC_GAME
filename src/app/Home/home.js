@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Page2 from "./pages/page2";
 
 export default function Page1() {
   return (
@@ -30,8 +29,10 @@ export default function Page1() {
               />
             </div>
             <div>
-              <Link href="./pages/page2.js" passHref>
+              {/* Link to Page2 */}
+              <Link href="./Second_page" >
                 <button className="rounded-full">
+                
                   <Image
                     src="/Assets/Images/Landing-Page_Explore_Button.png"
                     alt="Explore Button"
@@ -39,8 +40,10 @@ export default function Page1() {
                     height={100}
                     className="cursor-pointer"
                   />
+         
                 </button>
               </Link>
+          
             </div>
           </div>
 
@@ -49,9 +52,6 @@ export default function Page1() {
             <Image
               src="/Assets/Images/Landing-Page_Character.png"
               alt="Landing Page Character"
-               
-           
-             
               width={600}
               height={800}
             />
