@@ -16,6 +16,32 @@ export default function page(){
         setLanguage(languages[nextIndex]);
     };
 
+    const imageVariants = {
+        initial: {
+            y:"100vh",
+            opacity: 0,
+        },
+
+        animate: {
+            y:0, 
+            opacity: 1,
+            transition: {
+                duration: 1,
+                ease: "easeOut",
+            },
+        },
+
+        exit: {
+            y:"100vh",
+            opacity: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeIn",
+            },
+        },
+    };
+
+
     const toggleMusic = () => {
         setMusicOn(!musicOn);
     };
@@ -56,6 +82,7 @@ export default function page(){
         }
     }, [musicOn]);
 
+   
     return (
         <>
         <AnimatePresence mode="wait" >
@@ -64,14 +91,22 @@ export default function page(){
             <div className='absolute top-1/4 left-1/4'>
                 <Image src={getImageSrc()} width={300} height={500} alt="welcome text" className="w-96 h-auto "/>
             </div>
-            <div className='absolute top-1/4 right-1/4'>
+            <motion.div className='absolute top-1/4 right-1/4' 
+            variants={imageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            
+            >
+
             <Image
               src="/Assets/Images/Landing-Page_Character.png"
               alt="Landing Page Character"
               width={500}
               height={800}
             />
-            </div>
+            </motion.div>
+            
             <div className='absolute top-1/4 right-10 flex flex-col space-y-4'>
             <motion.button
                  whileHover={{ scale: 1.1 }}
