@@ -3,6 +3,8 @@ import {useState, useEffect, useRef} from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
+import { stagger } from 'motion';
+import gsap from "gsap";
 
 export default function page(){
     const [language, setLanguage] = useState('ENG');
@@ -16,7 +18,7 @@ export default function page(){
         setLanguage(languages[nextIndex]);
     };
 
-    const imageVariants = {
+    const imageVariants =  {
         initial: {
             y:"100vh",
             opacity: 0,
@@ -77,6 +79,32 @@ export default function page(){
     };
 
     useEffect(() => {
+
+        gsap.from(".landing-page", {
+            duration: 1.5,
+            opacity: 0,
+            y: 100,
+            ease: "power4.out",
+        });
+        gsap.from(".landing-character", {
+            duration: 1.5,
+            opacity: 0,
+            x: 100,
+            ease: "power4.out",
+            delay: 0.5,
+        });
+
+        gsap.from(".buttons", {
+            duration:1,
+            opacity: 0,
+            y:50,
+            ease: "power4.out",
+            delay: 1.5,
+            stagger: 0.2,
+        });
+
+
+         // Audio play logic for background music
         if(audioRef.current && musicOn){
             audioRef.current.volume = 0.2;
         }
@@ -88,9 +116,19 @@ export default function page(){
         <AnimatePresence mode="wait" >
         <motion.div>
         <div className="relative h-screen  text-white overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
-            <div className='absolute top-1/4 left-1/4'>
+        <motion.div
+        className="absolute top-1/4 left-1/4"
+        variants={imageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        >
+       
                 <Image src={getImageSrc()} width={300} height={500} alt="welcome text" className="w-96 h-auto "/>
-            </div>
+    
+
+        </motion.div>
+          
             <motion.div className='absolute top-1/4 right-1/4' 
             variants={imageVariants}
             initial="initial"
@@ -108,15 +146,15 @@ export default function page(){
             </motion.div>
             
             <div className='absolute top-1/4 right-10 flex flex-col space-y-4'>
-            <motion.button
+            <motion.div
                  whileHover={{ scale: 1.1 }}
                  whileTap={{ scale: 0.95 }}
                  onHoverStart={() => console.log('hover started!')}>  
                  <button onClick={handleLanguageChange} className=' p-2 '><Image width={50}
                  height={50} alt='Language_button'  src="/Assets/Images/Language_Button.png"/>
                  </button>
-            </motion.button>
-            <motion.button
+            </motion.div>
+            <motion.div
                  whileHover={{ scale: 1.1 }}
                  whileTap={{ scale: 0.95 }}
                  onHoverStart={() => console.log('hover started!')}>  
@@ -127,9 +165,9 @@ export default function page(){
                 <Image width={50}
                 height={50}  alt='music_off_button'  src="/Assets/Images/Music_off_button.png"/>}
                 </button>
-            </motion.button>
+            </motion.div>
 
-            <motion.button
+            <motion.div
                  whileHover={{ scale: 1.1 }}
                  whileTap={{ scale: 0.95 }}
                  onHoverStart={() => console.log('hover started!')}>  
@@ -139,7 +177,7 @@ export default function page(){
                 <Image width={50}
                 height={50} alt='home_Button'  src="/Assets/Images/Home_button.png"/> 
                 </button></Link>
-            </motion.button>
+            </motion.div>
 
           
        
