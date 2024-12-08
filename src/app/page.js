@@ -9,7 +9,7 @@ export default function Home() {
   return (
    <>
   <Page1/>
-  <Page2/>
+    
 
 
    </>

@@ -44,9 +44,12 @@ export default function Page2(){
                 <Image width={50}
                 height={50} alt='music_button'  src="/Assets/Images/Music_Button.png"/> : 
                 <Image width={50}
-                height={50}  alt='music_off_button'  src="/Assets/Images/Music_off_button.png"/>}</button>
-            <button  className=' p-2 '><Image width={50}
-                height={50}  src="/Assets/Images/Home_button.png"/> </button>
+                height={50}  alt='music_off_button'  src="/Assets/Images/Music_off_button.png"/>}
+                </button>
+                <button  className=' p-2 '>
+                <Image width={50}
+                height={50}  src="/Assets/Images/Home_button.png"/> 
+                </button>
 
             </div>
             {musicOn && <audio src="/Assets/Audio/back-to-school-happy-ukulele-summer-music-244394.mp3" autoPlay loop/>}
