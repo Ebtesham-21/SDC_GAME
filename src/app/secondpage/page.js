@@ -1,12 +1,13 @@
 "use client";
-import {useState} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function page(){
     const [language, setLanguage] = useState('ENG');
     const [musicOn, setMusicOn] = useState(true);
+    const audioRef = useRef(null);
 
     const handleLanguageChange = () => {
         const languages =['ENG', 'AR', 'KU'];
@@ -19,6 +20,25 @@ export default function page(){
         setMusicOn(!musicOn);
     };
 
+
+    const pageVariants = {
+        initial: {
+            opacity:0,
+            x:100,
+        },
+
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut"}
+        },
+
+        exit: {
+            opacity: 0,
+            x: -100,
+            transition: { duration: 0.5, ease: "easeIn"}
+        }
+    };
     const getImageSrc = () => {
         switch (language) {
             case 'AR':
@@ -30,8 +50,17 @@ export default function page(){
         }
     };
 
+    useEffect(() => {
+        if(audioRef.current && musicOn){
+            audioRef.current.volume = 0.2;
+        }
+    }, [musicOn]);
+
     return (
-        <div className='relative h-screen bg-blue-900 text-white overflow-hidden'>
+        <>
+        <AnimatePresence mode="wait" >
+        <motion.div>
+        <div className="relative h-screen  text-white overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
             <div className='absolute top-1/4 left-1/4'>
                 <Image src={getImageSrc()} width={300} height={500} alt="welcome text" className="w-96 h-auto "/>
             </div>
@@ -82,7 +111,10 @@ export default function page(){
               
 
             </div>
-            {musicOn && <audio src="/Assets/Audio/back-to-school-happy-ukulele-summer-music-244394.mp3" autoPlay loop/>}
+            {musicOn && <audio ref={audioRef} src="/Assets/Audio/back-to-school-happy-ukulele-summer-music-244394.mp3" autoPlay loop />}
         </div>
+        </motion.div>
+        </AnimatePresence>
+        </>
     );
 }
