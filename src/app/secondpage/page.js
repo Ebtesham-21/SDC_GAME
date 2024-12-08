@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 export default function page(){
     const [language, setLanguage] = useState('ENG');
@@ -43,18 +44,41 @@ export default function page(){
             />
             </div>
             <div className='absolute top-1/4 right-10 flex flex-col space-y-4'>
-            <button onClick={handleLanguageChange} className=' p-2 '><Image width={50}
-                height={50} alt='Language_button'  src="/Assets/Images/Language_Button.png"/></button>
+            <motion.button
+                 whileHover={{ scale: 1.1 }}
+                 whileTap={{ scale: 0.95 }}
+                 onHoverStart={() => console.log('hover started!')}>  
+                 <button onClick={handleLanguageChange} className=' p-2 '><Image width={50}
+                 height={50} alt='Language_button'  src="/Assets/Images/Language_Button.png"/>
+                 </button>
+            </motion.button>
+            <motion.button
+                 whileHover={{ scale: 1.1 }}
+                 whileTap={{ scale: 0.95 }}
+                 onHoverStart={() => console.log('hover started!')}>  
+             
             <button onClick={toggleMusic} className=' p-2 '>{musicOn ? 
                 <Image width={50}
                 height={50} alt='music_button'  src="/Assets/Images/Music_Button.png"/> : 
                 <Image width={50}
                 height={50}  alt='music_off_button'  src="/Assets/Images/Music_off_button.png"/>}
                 </button>
-                <Link href="./home" >  <button  className=' p-2 '>
+            </motion.button>
+
+            <motion.button
+                 whileHover={{ scale: 1.1 }}
+                 whileTap={{ scale: 0.95 }}
+                 onHoverStart={() => console.log('hover started!')}>  
+             
+             <Link href="./home" > 
+                 <button  className=' p-2 '>
                 <Image width={50}
                 height={50} alt='home_Button'  src="/Assets/Images/Home_button.png"/> 
                 </button></Link>
+            </motion.button>
+
+          
+       
               
 
             </div>
