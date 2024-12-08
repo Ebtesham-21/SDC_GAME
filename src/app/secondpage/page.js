@@ -50,23 +50,12 @@ export default function page(){
 
 
     const pageVariants = {
-        initial: {
-            opacity:0,
-            x:100,
-        },
-
-        animate: {
-            opacity: 1,
-            x: 0,
-            transition: { duration: 1, ease: "easeOut"}
-        },
-
-        exit: {
-            opacity: 0,
-            x: -100,
-            transition: { duration: 0.5, ease: "easeIn"}
-        }
+        initial: { opacity: 0, scale: 0.8 }, // Start small and invisible
+  animate: { opacity: 1, scale: 1 },   // Grow to normal size and fade in
+  exit: { opacity: 0, scale: 1.2 }, 
     };
+
+   
     const getImageSrc = () => {
         switch (language) {
             case 'AR':
@@ -114,10 +103,10 @@ export default function page(){
     return (
         <>
         <AnimatePresence mode="wait" >
-        <motion.div>
+        <motion.div variants={pageVariants}>
         <div className="relative h-screen  text-white overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
         <motion.div
-        className="absolute top-1/4 left-1/4"
+        className="absolute top-1/4 left-1/4 landing-image"
         variants={imageVariants}
         initial="initial"
         animate="animate"
@@ -129,7 +118,7 @@ export default function page(){
 
         </motion.div>
           
-            <motion.div className='absolute top-1/4 right-1/4' 
+            <motion.div className='absolute top-1/4 right-1/4 ' 
             variants={imageVariants}
             initial="initial"
             animate="animate"
@@ -173,10 +162,11 @@ export default function page(){
                  onHoverStart={() => console.log('hover started!')}>  
              
              <Link href="./home" > 
-                 <button  className=' p-2 '>
-                <Image width={50}
-                height={50} alt='home_Button'  src="/Assets/Images/Home_button.png"/> 
-                </button></Link>
+                <button  className=' p-2 '>
+                    <Image width={50}
+                 height={50} alt='home_Button'  src="/Assets/Images/Home_button.png"/> 
+                </button>
+            </Link>
             </motion.div>
 
           
