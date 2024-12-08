@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Page2 from "./pages/page2";
 
 export default function Page1() {
   return (
@@ -29,7 +30,7 @@ export default function Page1() {
               />
             </div>
             <div>
-              <Link href="/page2" passHref>
+              <Link href="./pages/page2.js" passHref>
                 <button className="rounded-full">
                   <Image
                     src="/Assets/Images/Landing-Page_Explore_Button.png"
