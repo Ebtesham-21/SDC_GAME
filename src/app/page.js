@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Page1 from "./Home/Home";
+import Page1 from "./home/page";
 
 
 export default function Home(){

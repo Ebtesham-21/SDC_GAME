@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Page1() {
+export default function page() {
   return (
     <>
       <div className="bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col items-center justify-center min-h-screen relative">
@@ -30,7 +30,7 @@ export default function Page1() {
             </div>
             <div>
               {/* Link to Page2 */}
-              <Link href="./Second_page" >
+              <Link href="./secondpage" >
                 <button className="rounded-full">
                 
                   <Image
@@ -53,7 +53,7 @@ export default function Page1() {
               src="/Assets/Images/Landing-Page_Character.png"
               alt="Landing Page Character"
               width={600}
-              height={800}
+              height={600}
             />
           </div>
         </div>
