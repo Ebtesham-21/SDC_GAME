@@ -50,8 +50,8 @@ export default function page(){
 
 
     const pageVariants = {
-        initial: { opacity: 0, scale: 0.8 }, // Start small and invisible
-  animate: { opacity: 1, scale: 1 },   // Grow to normal size and fade in
+        initial: { opacity: 0, scale: 0.8 }, 
+  animate: { opacity: 1, scale: 1 },   
   exit: { opacity: 0, scale: 1.2 }, 
     };
 
@@ -165,6 +165,19 @@ export default function page(){
                 <button  className=' p-2 '>
                     <Image width={50}
                  height={50} alt='home_Button'  src="/Assets/Images/Home_button.png"/> 
+                </button>
+            </Link>
+            </motion.div>
+
+            <motion.div
+                 whileHover={{ scale: 1.1 }}
+                 whileTap={{ scale: 0.95 }}
+                 onHoverStart={() => console.log('hover started!')}>  
+             
+             <Link href="./thirdPage" > 
+                <button  className=' p-2 '>
+                    <Image width={50}
+                    height={50} alt='front_Button'  src="/Assets/Images/Front.png"/> 
                 </button>
             </Link>
             </motion.div>
