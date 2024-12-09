@@ -4,9 +4,14 @@ export default function Page(){
     return (
         <div className="relative min-h-screen bg-gray-100 text-gray-800 flex flex-col">
             <div className="absolute top-4 left-4">
-                <button className="p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
-                    Back
-                </button>
+            <button className="p-2">
+              <Image
+                width={50}
+                height={50}
+                alt="home_Button"
+                src="/Assets/Images/Home_button.png"
+              />
+            </button>
             </div>
 
             {/* Heading */}
@@ -17,7 +22,18 @@ export default function Page(){
             </div>
 
             <div className="flex-grow flex items-center justify-center">
-                
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-5xl px-4">
+                    <div className="p-4 bg-white rounded-md flex items-center justify-center">
+                        <p>Column 1</p>
+                    </div>
+                    <div className="p-4 bg-white rounded-md flex items-center justify-center">
+                        <p>Column 2</p>
+                    </div>
+                    <div className="p-4 bg-white rounded-md flex items-center justify-center">
+                        <p>Column 3</p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
