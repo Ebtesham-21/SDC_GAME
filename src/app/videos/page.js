@@ -37,7 +37,7 @@ export default function Page() {
               </Link>
             </div>
             <div className="w-full max-w-xs p-4 mx-2 text-center">
-              <Link href="./videos">
+              <Link href="./documentedVideos">
                 <button className="p-2">
                   <Image
                     width={400}
@@ -53,7 +53,7 @@ export default function Page() {
           {/* Row 2 */}
           <div className="flex justify-center">
             <div className="w-full max-w-xs p-4 text-center">
-              <Link href="./videos">
+              <Link href="./othervideos">
                 <button className="p-2">
                   <Image
                     width={200}
