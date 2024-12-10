@@ -6,7 +6,7 @@ export default function Page(){
     return (
         <div className="relative min-h-screen overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col">
             <div className="absolute top-4 left-4">
-                
+            <Link href="./thirdPage">  
             <button className="p-2">
               <Image
                 width={50}
@@ -15,6 +15,7 @@ export default function Page(){
                 src="/Assets/Images/Back_button.png"
               />
             </button>
+            </Link>  
             </div>
 
             {/* Heading */}

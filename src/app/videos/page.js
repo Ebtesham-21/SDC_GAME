@@ -7,7 +7,7 @@ export default function Page() {
     <div className="min-h-screen overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col">
       {/* Back Button */}
       <div className="absolute top-4 left-4">
-        <Link href="./childsurvival">
+        <Link href="./fifthpage">
           <button className="p-2">
             <Image
               width={50}

@@ -6,7 +6,7 @@ export default function Page() {
     return(
         <div className="min-h-screen bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col">
             <div className='absolute top-4 left-4'>
-                <Link href="./videos">
+                <Link href="./fifthpage">
                     <button className='p-2'>
                         <Image width={50}
                         height={50}
