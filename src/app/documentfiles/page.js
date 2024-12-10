@@ -6,7 +6,7 @@ export default function Page() {
     return(
         <div className="min-h-screen bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col">
             <div className='absolute top-4 left-4'>
-                <Link href="./videos">
+                <Link href="./resource">
                     <button className='p-2'>
                         <Image width={50}
                         height={50}
@@ -20,14 +20,14 @@ export default function Page() {
             <div className='flex flex-grow items-center justify-center'>
                 <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl px-4'>
                     <div className='p-4  flex justify-center items-center'>
-                        <Link href="./imageresource">
+                        <Link href="">
                         <button className='p-2'>
                             <Image 
                             width={400}
                             height={400}
                             className='w-[300px] h-[300px] max-w-none max-h-none p-2'
                             alt="Animated Video 1"
-                            src="/Assets/Images/Page_05_Button_01_New.png"
+                            src="/Assets/Images/PDF-1.png"
                             />
                         </button>
                         </Link>
@@ -36,14 +36,14 @@ export default function Page() {
                     {/* column 2 */}
 
                     <div className='p-4 flex justify-center items-center'>
-                    <Link href="./audioresource">
+                    <Link href="">
                         <button className='p-2'>
                         <Image 
                             width={400}
                             height={400}
                             className='w-[300px] h-[300px] max-w-none max-h-none p-2'
                             alt="Animated Video 2"
-                            src="/Assets/Images/Page_05_Button_02-New.png"
+                            src="/Assets/Images/PDF-2.png"
                             />
                         </button>
                         </Link>
@@ -52,14 +52,14 @@ export default function Page() {
 
                          {/* column 3 */}
                     <div className='p-4 flex justify-center items-center'>
-                    <Link href="./documentfiles">
+                    <Link href="">
                         <button className='p-2'>
                         <Image 
                             width={400}
                             height={400}
                             className='w-[300px] h-[300px] max-w-none max-h-none p-2'
                             alt="Animated Video 2"
-                            src="/Assets/Images/Page_05_Button_03_New.png"
+                            src="/Assets/Images/PDF-3.png"
                             />
                         </button>
                         </Link>
