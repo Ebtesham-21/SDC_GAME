@@ -1,16 +1,18 @@
 import react from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page(){
     return (
         <div className="relative min-h-screen overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col">
             <div className="absolute top-4 left-4">
+                
             <button className="p-2">
               <Image
                 width={50}
                 height={50}
                 alt="home_Button"
-                src="/Assets/Images/Home_button.png"
+                src="/Assets/Images/Back_button.png"
               />
             </button>
             </div>
@@ -28,6 +30,7 @@ export default function Page(){
             <div className="flex-grow flex items-center justify-center">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-5xl px-4">
                     <div className="p-4   flex items-center justify-center">
+                        <Link href="./fifthpage" >
                         <button className="p-2">
                             <Image
                              width={200}
@@ -36,8 +39,9 @@ export default function Page(){
                              src="/Assets/Images/Chapter_page_Button_01.png"
                             />
                         </button>
+                        </Link>
                     </div>
-                    <div className="p-4   flex items-center justify-center">
+                    <div className="p-4  flex items-center justify-center">
                         <button className="p-2">
                             <Image
                              width={200}
