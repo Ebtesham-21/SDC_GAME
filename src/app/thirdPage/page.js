@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   const pageVariants = {
@@ -15,6 +16,7 @@ export default function Page() {
         <div className="flex-grow p-4 w-full sm:w-1/3">
           <div className="grid grid-cols-2 gap-4">
             <div className="text-white p-4">
+            <Link href="./childsurvival" > 
               <button className="p-2">
                 <Image
                   width={200}
@@ -23,6 +25,7 @@ export default function Page() {
                   src="/Assets/Images/2nd-page-button_01_N.png"
                 />
               </button>
+              </Link>
             </div>
             <div className="text-white p-4">
               <button className="p-2">
@@ -94,7 +97,7 @@ export default function Page() {
               <Image
                 width={50}
                 height={50}
-                alt="home_Button"
+                alt="Music_Button"
                 src="/Assets/Images/Music_Button.png"
               />
             </button>
@@ -102,7 +105,7 @@ export default function Page() {
               <Image
                 width={50}
                 height={50}
-                alt="home_Button"
+                alt="Language_Button"
                 src="/Assets/Images/Language_Button.png"
               />
             </button>
