@@ -26,13 +26,14 @@ export default function Page(){
                     <Image
                          width={400}
                          height={200}
-                          alt="home_Button"
-                          src="/Assets/Images/Page_04_Button_1_NEW.png"
+                         alt="home_Button"
+                         src="/Assets/Images/Page_04_Button_1_NEW.png"
                     />
                     </button>
                     </Link>
                     </div>
                     <div className="p-4  rounded-md text-center">
+                    <Link href="./resource">
                     <button className="p-2">
                     <Image
                          width={400}
@@ -41,6 +42,7 @@ export default function Page(){
                           src="/Assets/Images/Page_04_Button_3_NEW.png"
                     />
                     </button>
+                    </Link>
                     </div>
                     <div className="p-4  rounded-md text-center">
                     <button className="p-2">
