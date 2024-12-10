@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Page(){
     return(
-        <div className="min-h-screen overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center  bg-gray-100 flex flex-col">
+        <div className="min-h-screen overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center   flex flex-col">
             <div className="absolute top-4 left-4">
             <Link href="./childsurvival">
             <button className="p-2">
@@ -21,6 +21,7 @@ export default function Page(){
             <div className="flex flex-grow justify-center items-center">
                 <div className="grid gap-4">
                     <div className="p-4  rounded-md text-center">
+                    <Link href="./videos">
                     <button className="p-2">
                     <Image
                          width={400}
@@ -29,6 +30,7 @@ export default function Page(){
                           src="/Assets/Images/Page_04_Button_1_NEW.png"
                     />
                     </button>
+                    </Link>
                     </div>
                     <div className="p-4  rounded-md text-center">
                     <button className="p-2">
