@@ -7,7 +7,7 @@ export default function Page() {
     <div className="min-h-screen overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col">
       {/* Back Button */}
       <div className="absolute top-4 left-4">
-        <Link href="./childsurvival">
+        <Link href="./fifthpage">
           <button className="p-2">
             <Image
               width={50}
@@ -25,7 +25,7 @@ export default function Page() {
           {/* Row 1 */}
           <div className="flex justify-between mb-4">
             <div className="w-full max-w-xs p-4 mx-2 text-center">
-              <Link href="./videos">
+              <Link href="./animatedVideos">
                 <button className="p-2">
                   <Image
                     width={400}
