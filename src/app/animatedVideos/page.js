@@ -43,7 +43,7 @@ export default function Page() {
                             height={400}
                             className='w-[300px] h-[300px] max-w-none max-h-none p-2'
                             alt="Animated Video 2"
-                            src="/Assets/Images/Video-Button-1.png"
+                            src="/Assets/Images/Video-Button-2-New.png"
                             />
                         </button>
                         </Link>
@@ -59,7 +59,7 @@ export default function Page() {
                             height={400}
                             className='w-[300px] h-[300px] max-w-none max-h-none p-2'
                             alt="Animated Video 2"
-                            src="/Assets/Images/Video-Button-1.png"
+                            src="/Assets/Images/Video-Button-3-New.png"
                             />
                         </button>
                         </Link>
