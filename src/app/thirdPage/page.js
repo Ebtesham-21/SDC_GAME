@@ -109,6 +109,7 @@ export default function Page() {
                 src="/Assets/Images/Language_Button.png"
               />
             </button>
+            <Link href="/">
             <button className="p-2">
               <Image
                 width={50}
@@ -117,6 +118,7 @@ export default function Page() {
                 src="/Assets/Images/Home_button.png"
               />
             </button>
+            </Link>
           </div>
         </div>
       </div>
