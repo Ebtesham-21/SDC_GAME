@@ -45,6 +45,7 @@ export default function Page(){
                     </Link>
                     </div>
                     <div className="p-4  rounded-md text-center">
+                    <Link href="./qnaone">
                     <button className="p-2">
                     <Image
                          width={400}
@@ -53,6 +54,7 @@ export default function Page(){
                           src="/Assets/Images/Page_04_Button_2_NEW.png"
                     />
                     </button>
+                    </Link>
                     </div>
                 </div>
             </div>
