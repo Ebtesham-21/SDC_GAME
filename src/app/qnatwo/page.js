@@ -49,7 +49,7 @@ export default function page() {
             </div>
           </div>
 
-          {/* Character Image */}
+     
        
         </div>
       </div>
