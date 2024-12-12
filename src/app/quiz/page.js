@@ -1,66 +1,59 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
+export default function Page() {
+  return (
+    <div className="min-h-screen flex flex-col bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
+      {/* Back Button */}
+      <div className="absolute top-4 left-4">
+        <Link href="./previousPage">
+          <button className="p-2">
+            <img
+              src="/Assets/Images/Back_button.png"
+              alt="Back Button"
+              className="w-12 h-12"
+            />
+          </button>
+        </Link>
+      </div>
 
-export default function Page(){
-    return (
-        <>
-        <div className="min-h-screen bg-[url('/Assets/Images/BG.png')] bg-cover bg-center flex flex-col">
-            <div className="absolute top-4 left-4">
-                <Link href="">
-                <button className="p-2">
-                <Image
-                            width={50}
-                            height={50}
-                            alt="home_Button"
-                            src="/Assets/Images/Back_button.png"
-                        />
-                </button>
-                </Link>
+      {/* Centered Content */}
+      <div className="flex flex-grow justify-center items-center">
+        <div className="grid gap-4 max-w-4xl w-full px-4">
+          {/* First Row - Three Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-white p-4 flex justify-center items-center rounded shadow-md">
+              Option 1
             </div>
-
-            {/* content */}
-            <div className="justify-center items-center grid grid-rows-3 grid-flow-col gap-4">
-                <div className="bg-white justify-center items-center" >
-                    <div className="columns-3 p-4">
-                        <div>
-                        <button
-                        className="w-32 h-32 bg-[url('/Assets/Images/button-bg.png')] bg-cover bg-center rounded-md shadow-md"
-                        >
-                        <span className="text-white">Click Me</span>
-                        </button>
-                        </div>
-                        <div>Question</div>
-                        <div>01/10</div>
-                    </div>
-
-                </div>
-  
-                <div>
-                 <div className="bg-white justify-center items-center" >
-                    <div className="columns-2 p-4 m-10">
-                        <div className=" justify-center items-center p-4">A</div>
-                        <div className=" justify-center items-center p-4">B</div>
-                        
-                    </div>
-
-                 </div>
-                </div>
-                <div>
-                <div className="bg-white justify-center items-center" >
-                    <div className="columns-2 p-4 m-10">
-                        <div className=" justify-center items-center p-4">C</div>
-                        <div className=" justify-center items-center p-4">D</div>
-                        
-                    </div>
-
-                 </div>
-
-                    
-                </div>
+            <div className="bg-white p-4 flex justify-center items-center rounded shadow-md">
+              Option 2
             </div>
+            <div className="bg-white p-4 flex justify-center items-center rounded shadow-md">
+              Option 3
+            </div>
+          </div>
+
+          {/* Second Row - Two Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-white p-4 flex justify-center items-center rounded shadow-md">
+              Option 4
+            </div>
+            <div className="bg-white p-4 flex justify-center items-center rounded shadow-md">
+              Option 5
+            </div>
+          </div>
+
+          {/* Third Row - Two Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-white p-4 flex justify-center items-center rounded shadow-md">
+              Option 6
+            </div>
+            <div className="bg-white p-4 flex justify-center items-center rounded shadow-md">
+              Option 7
+            </div>
+          </div>
         </div>
-        </>
-    )
+      </div>
+    </div>
+  );
 }
