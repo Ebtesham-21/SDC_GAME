@@ -15,6 +15,28 @@ export default function QuizGame() {
         correct: 0,
 
         }, 
+        {
+            question: "Why keeping the food covered is important to prevent cholera?",
+        options: [
+            "So that no cholera carrying flies can sit on the food",
+            "So that no dust can get into the food",
+            "So that food doesn’t get cold",
+            "So that cholera bacteria cannot enter the food through the air",
+                 ],
+        correct: 0,
+
+        }, 
+        {
+            question: "Why keeping the food covered is important to prevent cholera?",
+        options: [
+            "So that no cholera carrying flies can sit on the food",
+            "So that no dust can get into the food",
+            "So that food doesn’t get cold",
+            "So that cholera bacteria cannot enter the food through the air",
+                 ],
+        correct: 0,
+
+        }, 
         // add more questions here
     ];
 
@@ -89,7 +111,7 @@ export default function QuizGame() {
             </div>
 
             {/* question and timer */}
-            <div className="flex justify-between items-center px-8 py-4">
+            <div className="flex justify-between items-center px-8 py-20"  >
                 <div className="text-3xl bg-blue-500 text-white p-4 rounded-full">{timeLeft}
 
                 </div>
@@ -105,11 +127,21 @@ export default function QuizGame() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
+            {/* options */}
 
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4">
+                {questions[currentQuestion].options.map((option, index) => (
+                    <button
+                    key={index}
+                    className="text-xl bg-orange-500 text-white p-4 rounded-lg hover:bg-orange-600 transition" onClick={() => handleAnswer(index)}
+                    >
+                        {option}
+
+                    </button>
+                ))}
             </div>
         </div>
-    )
+    );
 
     
 }

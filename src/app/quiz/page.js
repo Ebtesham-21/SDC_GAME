@@ -45,8 +45,10 @@ export default function Page(){
                     </div>
 
               
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
-                    <div className=" p-4 flex justify-center items-center">
+              
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className=" p-4 flex justify-center items-center ">
                     <Image   
                             width={600}
                             height={600}
@@ -61,7 +63,6 @@ export default function Page(){
                             src="/Assets/Images/Cholera_Q1_OpA.png" />
                     </div>
                 </div>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className=" p-4 flex justify-center items-center ">
                     <Image   
