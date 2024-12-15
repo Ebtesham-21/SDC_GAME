@@ -1,8 +1,70 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Page(){
+    const questions = [
+        {
+            question: "Why keeping the food covered is important to prevent cholera?",
+      options: [
+        "So that no cholera carrying flies can sit on the food",
+        "So that no dust can get into the food",
+        "So that food doesn’t get cold",
+        "So that cholera bacteria cannot enter the food through the air",
+      ],
+      correct: 0,
+        },
+    ];
+
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [score, setScore] = useState(0);
+    const [timeLeft, setTimeLeft] = useState(30);
+    const [showScore, setShowScore] = useState(false);
+
+    useEffect(() => {
+        if(timeLeft === 0){
+            handleNextQuestion();
+            return;
+
+        }
+
+        const timer = setTimeout(() => {
+            setTimeLeft(timeLeft - 1);
+        }, 1000);
+
+        return() => clearTimeout(timer);
+    }, [timeLeft]);
+
+
+    const handleAnswer = (index) => {
+        if(index === questions[currentQuestion].correct){
+            setScore(score + 1);
+        }
+        handleNextQuestion();
+    };
+
+    const handleNextQuestion = () => {
+        if(currentQuestion + 1 < questions.length){
+            setCurrentQuestion(currentQuestion + 1);
+            setTimeLeft(30);
+        } else {
+            setShowScore(true);
+        }
+    };
+
+
+    if(showScore){
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
+                <div className="text-center">
+                     <div className="text-3xl text-white bg-blue-500 p-4 rounded-lg">Total Score:</div>
+                     <div className="text-5xl text-white bg-pink-500 p-4 rounded-lg mt-4">{score}/{questions.length}</div>
+                </div>
+            </div>
+        );
+    }
+
     return(
         <div className="min-h-screen flex flex-col  bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
             <div className="absolute top-4 left-4">
@@ -22,11 +84,11 @@ export default function Page(){
                 <div className="grid grid-gap-4 max-w-4xl w-full px-4">
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div className=" p-4 flex justify-center items-center ">
-                            <Image   
-                            width={100}
-                            height={100}
-                            alt="home_Button"
-                            src="/Assets/Images/Time_button.png" />
+                         
+                        <button 
+                         className="w-24 h-24 bg-[url('/Assets/Images/Time_button.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
+                         {timeLeft}
+                        </button>
                         </div>
                         <div className=" p-4 flex justify-center items-center ">
                         <Image   
