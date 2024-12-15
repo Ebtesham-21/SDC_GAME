@@ -81,8 +81,8 @@ export default function Page(){
 
             {/* quiz */}
             <div className="flex flex-grow justify-center items-center">
-                <div className="grid grid-gap-4 max-w-4xl w-full px-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="grid grid-gap-4 max-w-4xl w-full ">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 ">
                         <div className=" p-4 flex justify-center items-center ">
                          
                         <button 
@@ -90,19 +90,17 @@ export default function Page(){
                          {timeLeft}
                         </button>
                         </div>
-                        <div className=" p-4 flex justify-center items-center ">
-                        <Image   
-                            width={600}
-                            height={600}
-                            alt="home_Button"
-                            src="/Assets/Images/Q-n-A-Question-Bar.png" />
+                        <div 
+                            className="w-full max-w-3xl h-32 bg-[url('/Assets/Images/Q-n-A-Question-Bar.png')] bg-cover bg-center flex items-center justify-center text-white text-lg font-semibold px-4 text-center">
+                            Why keeping the food covered is important to prevent cholera?
                         </div>
+
                         <div className=" p-4 flex justify-center items-center ">
-                        <Image   
-                            width={100}
-                            height={100}
-                            alt="home_Button"
-                            src="/Assets/Images/Score_Button.png" />
+                      
+                        <button 
+                         className="w-24 h-24 bg-[url('/Assets/Images/Score_Button.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
+                         {currentQuestion + 1} / {questions.length}
+                        </button>
                         </div>
                     </div>
 
@@ -116,6 +114,7 @@ export default function Page(){
                             height={600}
                             alt="home_Button"
                             src="/Assets/Images/Cholera_Q1_OpA.png" />
+                            
                     </div>
                     <div className=" p-4 flex justify-center items-center">
                     <Image   
