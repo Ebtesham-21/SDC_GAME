@@ -109,11 +109,11 @@ export default function Page(){
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className=" p-4 flex justify-center items-center ">
-                    <Image   
-                            width={600}
-                            height={600}
-                            alt="home_Button"
-                            src="/Assets/Images/Cholera_Q1_OpA.png" />
+                   
+                        <button 
+                         className="w-600 h-400 p-10 bg-[url('/Assets/Images/Cholera_Q1_OpA.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
+                         "So that no cholera carrying flies can sit on the food"
+                        </button>
                             
                     </div>
                     <div className=" p-4 flex justify-center items-center">
