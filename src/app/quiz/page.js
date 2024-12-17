@@ -15,6 +15,37 @@ export default function Page(){
       ],
       correct: 0,
         },
+        {
+            question: "Why is washing hands before eating important?",
+      options: [
+        "To remove dirt and germs from the hands",
+        "To make the food taste better",
+        "To keep the hands moisturized",
+        "To prevent the hands from getting sticky",
+      ],
+      correct: 0,
+        },
+        {
+            question: "What is the best way to purify drinking water?",
+      options: [
+        "Store the water in a sealed container",
+        "Boil the water for at least 1 minute",
+        "Leave the water in the sun for 5 minutes",
+        
+        "Add salt to the water",
+      ],
+      correct: 1,
+        },
+        {
+            question: "Why should leftover food be stored in a refrigerator?",
+      options: [
+        "To make the food colder",
+        "To prevent bacteria from growing on it",
+        "So that food doesn’t get cold",
+        "So that cholera bacteria cannot enter the food through the air",
+      ],
+      correct: 0,
+        },
     ];
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -81,9 +112,9 @@ export default function Page(){
 
             {/* quiz */}
             <div className="flex flex-grow justify-center items-center">
-                <div className="grid grid-gap-4 max-w-4xl w-full ">
+                <div className="grid  max-w-4xl w-full ">
                     <div className="grid grid-cols-1 sm:grid-cols-3 ">
-                        <div className=" p-4 flex justify-center items-center ">
+                        <div className=" p-6  flex justify-center items-center ">
                          
                         <button 
                          className="w-24 h-24 bg-[url('/Assets/Images/Time_button.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
@@ -91,11 +122,11 @@ export default function Page(){
                         </button>
                         </div>
                         <div 
-                            className="w-full max-w-3xl h-32 bg-[url('/Assets/Images/Q-n-A-Question-Bar.png')] bg-cover bg-center flex items-center justify-center text-white text-lg font-semibold px-4 text-center">
-                            Why keeping the food covered is important to prevent cholera?
+                            className="w-full max-w-3xl  bg-[url('/Assets/Images/Q-n-A-Question-Bar.png')] bg-cover bg-center flex items-center justify-center text-white text-lg font-semibold text-center">
+                            {questions[currentQuestion].question}
                         </div>
 
-                        <div className=" p-4 flex justify-center items-center ">
+                        <div className="  flex justify-center items-center ">
                       
                         <button 
                          className="w-24 h-24 bg-[url('/Assets/Images/Score_Button.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
@@ -107,39 +138,27 @@ export default function Page(){
               
               
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className=" p-4 flex justify-center items-center ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 ">
+                    {questions[currentQuestion].options.map((option, index) =>(
+                          <div className=" p-6 flex justify-center items-center ">
                    
-                        <button 
-                         className="w-600 h-400 p-10 bg-[url('/Assets/Images/Cholera_Q1_OpA.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
-                         "So that no cholera carrying flies can sit on the food"
-                        </button>
-                            
-                    </div>
-                    <div className=" p-4 flex justify-center items-center">
-                    <Image   
-                            width={600}
-                            height={600}
-                            alt="home_Button"
-                            src="/Assets/Images/Cholera_Q1_OpA.png" />
-                    </div>
+                          <button 
+                              key={index}
+                           className="w-400 h-400 p-6 bg-[url('/Assets/Images/QNABG.png')] bg-cover bg-center flex items-center justify-center text-white font-bold"
+                           onClick={() => handleAnswer(index)}
+                           >
+                              {option}
+                           
+                          </button>
+                              
+                      </div>
+                        
+                    ))}
+                  
+                
+                 
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className=" p-4 flex justify-center items-center ">
-                    <Image   
-                            width={600}
-                            height={600}
-                            alt="home_Button"
-                            src="/Assets/Images/Cholera_Q1_OpA.png" />
-                    </div>
-                    <div className=" p-4 flex justify-center items-center">
-                    <Image   
-                            width={600}
-                            height={600}
-                            alt="home_Button"
-                            src="/Assets/Images/Cholera_Q1_OpA.png" />
-                    </div>
-                </div>
+                
             </div>
         </div>
         </div>
