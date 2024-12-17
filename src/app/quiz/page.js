@@ -60,7 +60,7 @@ export default function Page() {
 
     const timer = setTimeout(() => {
       setTimeLeft(timeLeft - 1);
-    }, 4000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [timeLeft]);
