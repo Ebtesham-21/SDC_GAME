@@ -13,70 +13,81 @@ export default function Page() {
     <>
       <div className="flex h-screen text-white overflow-hidden bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
         {/* First Div */}
-        <div className="flex-grow p-4 w-full sm:w-1/3">
+        <div className="flex-grow p-4 w-full  sm:w-1/3">
           <div className="grid grid-cols-2 gap-4">
-            <div className="text-white p-4">
+            <div className="text-white p-2 transform transition-all duration-300 hover:scale-110  ">
             <Link href="./childsurvival" > 
-              <button className="p-2">
+              <button className="p-2 ">
                 <Image
-                  width={200}
+                  width={600}
                   height={200}
                   alt="home_Button"
-                  src="/Assets/Images/2nd-page-button_01_N.png"
+                  src="/Assets/Images/Child_Survival-01.png"
                 />
               </button>
               </Link>
             </div>
-            <div className="text-white p-4">
-              <button className="p-2">
+            <div className="text-white p-2 transform transition-all duration-300 hover:scale-110  ">
+            <Link href="./childsurvival" > 
+              <button className="p-2 ">
                 <Image
-                  width={200}
+                  width={600}
                   height={200}
                   alt="home_Button"
-                  src="/Assets/Images/2nd-page-button_04_N.png"
+                  src="/Assets/Images/Social_Protection-01.png"
                 />
               </button>
+              </Link>
             </div>
-            <div className="text-white p-4">
-              <button className="p-2">
+            <div className="text-white p-2 transform transition-all duration-300 hover:scale-110  ">
+            <Link href="./childsurvival" > 
+              <button className="p-2 ">
                 <Image
-                  width={200}
+                  width={600}
                   height={200}
                   alt="home_Button"
-                  src="/Assets/Images/2nd-page-button_02_N.png"
+                  src="/Assets/Images/Child_Rights-01.png"
                 />
               </button>
+              </Link>
             </div>
-            <div className="text-white p-4">
-              <button className="p-2">
+            <div className="text-white p-2 transform transition-all duration-300 hover:scale-110  ">
+            <Link href="./childsurvival" > 
+              <button className="p-2 ">
                 <Image
-                  width={200}
+                  width={600}
                   height={200}
                   alt="home_Button"
-                  src="/Assets/Images/2nd-page-button_05_N.png"
+                  src="/Assets/Images/Out_of_school-01.png"
                 />
               </button>
+              </Link>
             </div>
-            <div className="text-white p-4">
-              <button className="p-2">
+            <div className="text-white p-2 transform transition-all duration-300 hover:scale-110  ">
+            <Link href="./childsurvival" > 
+              <button className="p-2 ">
                 <Image
-                  width={200}
+                  width={600}
                   height={200}
                   alt="home_Button"
-                  src="/Assets/Images/2nd-page-button_03_N.png"
+                  src="/Assets/Images/Climate_change-01.png"
                 />
               </button>
+              </Link>
             </div>
-            <div className="text-white p-4">
-              <button className="p-2">
+            <div className="text-white p-2 transform transition-all duration-300 hover:scale-110  ">
+            <Link href="./childsurvival" > 
+              <button className="p-2 ">
                 <Image
-                  width={200}
+                  width={600}
                   height={200}
                   alt="home_Button"
-                  src="/Assets/Images/2nd-page-button_06_N.png"
+                  src="/Assets/Images/Early_childhood-01.png"
                 />
               </button>
+              </Link>
             </div>
+            
           </div>
         </div>
 
