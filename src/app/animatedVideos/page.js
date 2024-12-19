@@ -59,7 +59,7 @@ export default function Page() {
                             height={400}
                             className=' max-w-none max-h-none '
                             alt="Animated Video 2"
-                            src="/Assets/Images/Coming_soon-01.png"
+                            src="/Assets/Images/Coming_soon-02-01.png"
                             />
                         </button>
                         </Link>
