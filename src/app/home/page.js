@@ -38,9 +38,9 @@ export default function page() {
                 <button className="rounded-full transform transition-all duration-300 hover:scale-110 hover:shadow-lg">
                 
                   <Image
-                    src="/Assets/Images/Landing-Page_Explore_Button.png"
+                    src="/Assets/Images/Explore-Blue-01.png"
                     alt="Explore Button"
-                    width={200}
+                    width={300}
                     height={100}
                     className="cursor-pointer fade-in"
                   />
