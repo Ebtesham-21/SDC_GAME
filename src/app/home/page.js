@@ -35,17 +35,33 @@ export default function page() {
               
               <Link href="./secondpage" >
               
-                <button className="rounded-full transform transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                
-                  <Image
-                    src="/Assets/Images/Explore-Blue-01.png"
-                    alt="Explore Button"
-                    width={300}
-                    height={100}
-                    className="cursor-pointer fade-in"
-                  />
-         
-                </button>
+              <button
+                className="rounded-full transform transition-all duration-300 hover:scale-110  bg-cover bg-center text-4xl text-white"
+                style={{
+                  backgroundImage: "url('/Assets/Images/Explore-Blue-01.png')",
+                  width: "300px",
+                  height: "100px",
+                }}
+              >
+
+                Explore
+              </button>
+
+              </Link>
+              <Link href="./secondpage" >
+              
+              <button
+                className="rounded-full transform transition-all duration-300 hover:scale-110  bg-cover bg-center text-4xl text-white "
+                style={{
+                  backgroundImage: "url('/Assets/Images/Explore-With-Text-01.png')",
+                  width: "250px",
+                  height: "100px",
+                }}
+              >
+
+           
+              </button>
+
               </Link>
           
             </div>
