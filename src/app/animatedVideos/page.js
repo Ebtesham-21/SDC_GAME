@@ -18,7 +18,7 @@ export default function Page() {
             </div>
             {/* center content */}
             <div className='flex flex-grow items-center justify-center'>
-                <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl px-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl '>
                     <div className='p-4  flex justify-center items-center'>
                         <Link href="">
                         <button className='p-2'>
@@ -35,15 +35,15 @@ export default function Page() {
 
                     {/* column 2 */}
 
-                    <div className='p-4 flex justify-center items-center'>
+                    <div className='flex justify-center items-center border '>
                     <Link href="">
-                        <button className='p-2'>
+                        <button className=''>
                         <Image 
                             width={400}
                             height={400}
-                            className='w-[300px] h-[300px] max-w-none max-h-none p-2'
+                            className='w-[400px] h-[400px] max-w-none max-h-none '
                             alt="Animated Video 2"
-                            src="/Assets/Images/Video-Button-2-New.png"
+                            src="/Assets/Images/Coming_soon-01.png"
                             />
                         </button>
                         </Link>
@@ -51,20 +51,21 @@ export default function Page() {
                     </div>
 
                          {/* column 3 */}
-                    <div className='p-4 flex justify-center items-center'>
+                         <div className='flex justify-center items-center border '>
                     <Link href="">
-                        <button className='p-2'>
+                        <button className=''>
                         <Image 
                             width={400}
                             height={400}
-                            className='w-[300px] h-[300px] max-w-none max-h-none p-2'
+                            className='w-[400px] h-[400px] max-w-none max-h-none '
                             alt="Animated Video 2"
-                            src="/Assets/Images/Video-Button-3-New.png"
+                            src="/Assets/Images/Coming_soon-01.png"
                             />
                         </button>
                         </Link>
 
                     </div>
+                    
                     <div>
 
                     </div>
