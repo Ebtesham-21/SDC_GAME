@@ -35,13 +35,13 @@ export default function Page() {
 
                     {/* column 2 */}
 
-                    <div className='flex justify-center items-center border '>
+                    <div className='flex justify-center items-center  '>
                     <Link href="">
                         <button className=''>
                         <Image 
-                            width={400}
+                            width={600}
                             height={400}
-                            className='w-[400px] h-[400px] max-w-none max-h-none '
+                            className=' max-w-none max-h-none '
                             alt="Animated Video 2"
                             src="/Assets/Images/Coming_soon-01.png"
                             />
@@ -51,13 +51,13 @@ export default function Page() {
                     </div>
 
                          {/* column 3 */}
-                         <div className='flex justify-center items-center border '>
+                         <div className='flex justify-center items-center  '>
                     <Link href="">
                         <button className=''>
                         <Image 
-                            width={400}
+                            width={600}
                             height={400}
-                            className='w-[400px] h-[400px] max-w-none max-h-none '
+                            className=' max-w-none max-h-none '
                             alt="Animated Video 2"
                             src="/Assets/Images/Coming_soon-01.png"
                             />
