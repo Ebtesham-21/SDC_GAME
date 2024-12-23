@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -49,21 +49,6 @@ export default function Page() {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(30);
-  const [showScore, setShowScore] = useState(false);
-
-  useEffect(() => {
-    if (timeLeft === 0) {
-      handleNextQuestion();
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      setTimeLeft(timeLeft - 1);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [timeLeft]);
 
   const handleAnswer = (index) => {
     if (index === questions[currentQuestion].correct) {
@@ -75,29 +60,11 @@ export default function Page() {
   const handleNextQuestion = () => {
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
-      setTimeLeft(30);
-    } else {
-      setShowScore(true);
     }
   };
 
-  if (showScore) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
-        <div className="text-center">
-          <div className="text-3xl text-white bg-blue-500 p-4 rounded-lg">
-            Total Score:
-          </div>
-          <div className="text-5xl text-white bg-pink-500 p-4 rounded-lg mt-4">
-            {score}/{questions.length}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen flex flex-col bg-[url('/Assets/Images/BG.png')] bg-cover bg-center ">
+    <div className="min-h-screen flex flex-col bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
       {/* Back Button */}
       <div className="absolute top-4 left-4">
         <Link href="./qnatwo">
@@ -113,54 +80,28 @@ export default function Page() {
       </div>
 
       {/* Quiz Section */}
-      <div className="flex flex-grow justify-center items-center mx-0 ">
-           
-     
-
-        <div className="grid max-w-6xl w-full ">
-          {/* Timer, Question, and Score */}
-          <div className="flex  items-center justify-center space-y-6">
-         {/* Timer */}
-        <div className="p-6 flex justify-center items-center">
-            <button className="w-24 h-24 bg-[url('/Assets/Images/Time_button.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
-            {timeLeft}
-            </button>
-        </div>
-
-        {/* Question */}
-        <div className="flex justify-center items-center">
-            <div className="w-[800px] h-[180px] bg-[url('/Assets/Images/Q-n-A-Question-Bar.png')] bg-cover bg-center rounded-[90px] shadow-md flex items-center justify-center text-white text-xl font-bold text-center px-8">
-            {questions[currentQuestion].question}
-            </div>
-        </div>
-
-        {/* Score */}
-        <div className="p-6 flex justify-center items-center">
-            <button className="w-24 h-24 bg-[url('/Assets/Images/Score_Button.png')] bg-cover bg-center flex items-center justify-center text-white font-bold">
-            {currentQuestion + 1} / {questions.length}
-            </button>
-        </div>
-        </div>
-
-
-          {/* Options */}
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2  mt-6 pt-6">
-                {questions[currentQuestion].options.map((option, index) => (
-                    <div key={index} className="flex justify-center items-center">
-                    <button
-                        className="w-[400px] h-[120px] px-8 bg-[url('/Assets/Images/QNABG.png')] bg-cover bg-center rounded-[50px] shadow-md flex items-center justify-center text-white font-bold text-center text-lg"
-                        onClick={() => handleAnswer(index)}
-                    >
-                        {option}
-                    </button>
-                    </div>
-                ))}
-          </div>
-
-
-        </div>
+      <div className="flex flex-grow justify-center items-center mx-0">
+  <div className="grid max-w-6xl w-full">
+    {/* Question */}
+    <div className="flex justify-center items-center p-6">
+      <div className="text-2xl text-white bg-blue-500 p-4 rounded-lg">
+        {questions[currentQuestion].question}
       </div>
+    </div>
+    {/* Options */}
+    <div className="grid grid-cols-2 gap-4 mt-4">
+      {questions[currentQuestion].options.map((option, index) => (
+        <button
+          key={index}
+          className="text-xl text-white bg-pink-500 p-4 rounded-lg"
+          onClick={() => handleAnswer(index)}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
+   </div>
+    </div>
     </div>
   );
 }
