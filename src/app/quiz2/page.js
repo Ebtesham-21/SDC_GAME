@@ -87,11 +87,16 @@ const handleCloseModal = () => {
 
 return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[url('/Assets/Images/BG.png')] bg-cover bg-center">
-        <div className="text-lg font-bold mb-6">
+        {/* {Question Counter} */}
+        <div className="text-lg text-white font-bold mb-6">
             Question {currentQuestion + 1}/{questions.length}
         </div>
 
-        {/* Question */}
+        <div className="bg-blue-500 text-white p-6 rounded-lg shadow-md text-center mb-6 text-xl w-4/5 md:w-3/5" >
+            {questions[currentQuestion].question}
+        </div>
+
+        {/* Options */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-4/5 md:w-3/5">
         {questions[currentQuestion].options.map((option, index) => (
             <button 
